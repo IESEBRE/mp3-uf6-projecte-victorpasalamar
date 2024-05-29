@@ -131,10 +131,6 @@ public class AlumneDAOJDBCOracleImpl implements DAO<Jefe> {
             }
             throw new DAOException(tipoError);
         }
-
-
         return jefes;
     }
-
-
 }
