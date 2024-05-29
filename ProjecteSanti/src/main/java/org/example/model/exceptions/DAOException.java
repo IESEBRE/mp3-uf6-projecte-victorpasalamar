@@ -3,13 +3,21 @@ package org.example.model.exceptions;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DAOException extends Exception{
+public class DAOException extends Exception {
 
     private static final Map<Integer, String> missatges = new HashMap<>();
+
     //num i retorna string, el map
     static {
         missatges.put(0, "Error al connectar a la BD!!");
         missatges.put(1, "Restricció d'integritat violada - clau primària duplicada");
+        missatges.put(2, "El nom ha de complir certa estructura. exemple: jefe, titol");
+        missatges.put(3, "La vida i el numero d'atacs han de ser un nombre positiu");
+        missatges.put(4, "El nom del jefe ha de ser unic");
+        missatges.put(5, "Falta omplir alguna dada");
+        missatges.put(6, "Per a modificar un jefe has de cambiar alguna dada");
+        missatges.put(7, "Per a modificar has de seleccionar un jefe");
+        missatges.put(8, "Per a borrar has de seleccionar un jefe");
         missatges.put(904, "Nom de columna no vàlid");
         missatges.put(936, "Falta expressió en l'ordre SQL");
         missatges.put(942, "La taula o la vista no existeix");
@@ -25,16 +33,16 @@ public class DAOException extends Exception{
     }
 
     //atribut
-    private int tipo;
+    private final int tipo;
 
     //constructor al q pasem tipo
-    public DAOException(int tipo){
-        this.tipo=tipo;
+    public DAOException(int tipo) {
+        this.tipo = tipo;
     }
 
     //sobreescrivim el get message
-        @Override
-    public String getMessage(){
+    @Override
+    public String getMessage() {
         return missatges.get(this.tipo); //el missatge del tipo
     }
 

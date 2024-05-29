@@ -1,7 +1,6 @@
 package org.example.app;
 
 import org.example.controller.Controller;
-import org.example.model.exceptions.DAOException;
 import org.example.model.impls.AlumneDAOJDBCOracleImpl;
 import org.example.view.MatriculaView;
 

@@ -3,36 +3,19 @@ package org.example.view;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-public class MatriculaView extends JFrame{
+public class MatriculaView extends JFrame {
     private JTabbedPane pestanyes;
     private JTable taula;
     private JScrollPane scrollPane1;
     private JButton insertarButton;
     private JButton modificarButton;
     private JButton borrarButton;
-    private JTextField campNom;
-    private JTextField campPes;
-    private JCheckBox caixaAlumne;
+    private JTextField campNomJefe;
+    private JTextField campVida;
+    private JCheckBox caixaDificultat;
     private JPanel panel;
-    private JTable taulaMat;
-    private JComboBox comboMP;
-    private JTextField campNota;
-    //private JTabbedPane PanelPestanya;
-
-    //Getters
-
-
-    public JTable getTaulaMat() {
-        return taulaMat;
-    }
-
-    public JComboBox getComboMP() {
-        return comboMP;
-    }
-
-    public JTextField getCampNota() {
-        return campNota;
-    }
+    private JTextField campNumAtacs;
+    private JComboBox comboBox1;
 
     public JTabbedPane getPestanyes() {
         return pestanyes;
@@ -54,18 +37,25 @@ public class MatriculaView extends JFrame{
         return insertarButton;
     }
 
-    public JTextField getCampNom() {
-        return campNom;
+    public JTextField getCampNomJefe() {
+        return campNomJefe;
     }
 
-    public JTextField getCampPes() {
-        return campPes;
+    public JTextField getCampVida() {
+        return campVida;
     }
 
-    public JCheckBox getCaixaAlumne() {
-        return caixaAlumne;
+    public JCheckBox getCaixaDificultat() {
+        return caixaDificultat;
     }
 
+    public JTextField getCampNumAtacs() {
+        return campNumAtacs;
+    }
+
+    public JComboBox getComboBox1() {
+        return comboBox1;
+    }
 
     //Constructor de la classe
     public MatriculaView() {
@@ -76,9 +66,12 @@ public class MatriculaView extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.pack();
         this.setVisible(false);
+        this.setSize(650, 750);
+
+
     }
 
-        private void createUIComponents() {
+    private void createUIComponents() {
         // TODO: place custom component creation code here
         scrollPane1 = new JScrollPane();
         taula = new JTable();
@@ -88,4 +81,5 @@ public class MatriculaView extends JFrame{
         scrollPane1.setViewportView(taula);
 
     }
+
 }
